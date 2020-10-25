@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
+class App extends Component {
+
+    handlerTextBox(e){
+      var campotexto=e.target.value;
+    }
+
+    consultarApi(){
+
+    }
+
+  render(){
+  
+    return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -16,11 +27,13 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          consulta Api
         </a>
+        <input type="text" onChange={this.handlerTextBox.bind(this)}></input>
       </header>
     </div>
   );
 }
 
+}
 export default App;
