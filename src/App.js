@@ -55,20 +55,7 @@ handlerCLick = () =>{
   }
 }
 
-handlerCLickRandom = () =>{
 
-  axios.get("https://kitsu.io/api/edge/characters/")
-  .then(
-    dato => {
-      console.log( dato.data);
-
-      this.setState({
-        response: dato.data,
-        estadoR: true
-      })
-      console.log(this.state)
-    });
-}
   render() {
     if(this.state.estado != true && this.state.estadoR != true){
       return (
