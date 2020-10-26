@@ -54,8 +54,6 @@ handlerCLick = () =>{
     });
   }
 }
-
-
   render() {
     if(this.state.estado != true && this.state.estadoR != true){
       return (
@@ -67,8 +65,7 @@ handlerCLick = () =>{
             <input type="text" name="name" pattern="{1,150}" onChange={this.handlerBuscar.bind(this)}/>
             <input type="button" value="Buscar" onClick={this.handlerCLick.bind(this)}/>
           </div>
-
-         
+        
           </header>
         </div>
       );
@@ -84,12 +81,27 @@ handlerCLick = () =>{
             <input type="button" value="Buscar" onClick={this.handlerCLick.bind(this)}/>
 
           </div>
+            
+          <div className="ApiDatosBusqueda">
+             <p><img src={this.state.response.data.attributes.image.original} ></img></p>
+             <p>nombre: {this.state.response.data.attributes.canonicalName}</p>
+             <p>nombre en japones: {this.state.response.data.attributes.names.ja_jp}</p>             
+             <p>otros nombres: {this.state.response.data.attributes.otherNames}</p>             
+             <p>descripcion: {this.state.response.data.attributes.description}</p>                          
+                    
+         </div>
+            
           </header>
         </div>
       );
   }
 }
 }
+/*
+<div className="ApiDatosBusqueda">
+    <p>nombre: {this.state.response.data.attributes.canonicalName}</p>             
+</div>
+*/
 
 export default App;
 
