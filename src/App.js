@@ -77,7 +77,7 @@ handlerCLickRandom = () =>{
            
           <div>
             <h2>Buscar un personaje por id</h2>
-            <input type="text" name="name" pattern="[a-z]{1,15}" onChange={this.handlerBuscar.bind(this)}/>
+            <input type="text" name="name" pattern="{1,150}" onChange={this.handlerBuscar.bind(this)}/>
             <input type="button" value="Buscar" onClick={this.handlerCLick.bind(this)}/>
           </div>
 
@@ -93,7 +93,7 @@ handlerCLickRandom = () =>{
            
           <div>
             <h2>Buscar otro personaje por id</h2>
-            <input type="text" name="name" pattern="[a-z]{1,15}" onChange={this.handlerBuscar.bind(this)}/>
+            <input type="text" name="name" pattern="{1,150}" onChange={this.handlerBuscar.bind(this)}/>
             <input type="button" value="Buscar" onClick={this.handlerCLick.bind(this)}/>
 
           </div>
